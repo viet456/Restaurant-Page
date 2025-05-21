@@ -1,3 +1,4 @@
+import restaurantImg from './assets/images/restaurant.jpg';
 export function loadHome() {
     const content = document.getElementById('content');
     
@@ -8,11 +9,17 @@ export function loadHome() {
     
     //hero/hook
     const hero = document.createElement('div');
-
-    const hook = document.createElement('h3');
+    hero.id = 'hero';
+    const hook = document.createElement('span');
     hook.innerHTML = 'Where Mediterranean Spice Meets California Sunshine:<br>' +
                         'Fresh, seasonal dishes inspired by the shores of the ' +
                         'Med and the fields of California.'
     hero.append(hook);
+
+    const img = document.createElement('img');
+    img.src = restaurantImg;
+    img.alt = 'Stylish dining room at Saffron & Sage'
+    hero.append(img);
+
     content.append(hero);
 }
