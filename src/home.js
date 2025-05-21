@@ -1,11 +1,12 @@
 import restaurantImg from './assets/images/restaurant.jpg';
+
 export function loadHome() {
     const content = document.getElementById('content');
-    
+    const header = document.getElementById('header');
     //header
     const heading = document.createElement('h1');
     heading.textContent = 'Saffron & Sage'
-    content.append(heading);
+    header.append(heading);
     
     //hero/hook
     const hero = document.createElement('div');
@@ -15,11 +16,5 @@ export function loadHome() {
                         'Fresh, seasonal dishes inspired by the shores of the ' +
                         'Med and the fields of California.'
     hero.append(hook);
-
-    const img = document.createElement('img');
-    img.src = restaurantImg;
-    img.alt = 'Stylish dining room at Saffron & Sage'
-    hero.append(img);
-
     content.append(hero);
 }
