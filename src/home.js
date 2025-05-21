@@ -1,13 +1,6 @@
 import restaurantImg from './assets/images/restaurant.jpg';
 
-export function loadHome() {
-    const content = document.getElementById('content');
-    const header = document.getElementById('header');
-    //header
-    const heading = document.createElement('h1');
-    heading.textContent = 'Saffron & Sage'
-    header.append(heading);
-    
+export function renderHome() {
     //hero/hook
     const hero = document.createElement('div');
     hero.id = 'hero';

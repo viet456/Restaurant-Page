@@ -7,6 +7,10 @@ body {
     display: grid;
     grid-template-rows: 1fr 6fr;
 }
+/* buttons */
+#home {
+    
+}
 
 #header {
     grid-row: 1/2;

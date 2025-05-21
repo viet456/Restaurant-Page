@@ -1,5 +1,23 @@
 import "./styles.css";
-import { loadHome } from "./home.js";
+import { renderNav } from "./navbar.js";
+import { renderHome } from "./home.js";
+import { clearPage } from "./clear.js";
+
+//page buttons
+const home = document.getElementById('home');
+const menu = document.getElementById('menu');
+const contact = document.getElementById('contact');
+
+home.addEventListener('click', () => {
+    clearPage();
+    renderHome();
+});
+
+menu.addEventListener('click', () => {
+    clearPage();
+    
+});
 
 console.log("we're live");
-loadHome();
+renderNav();
+renderHome();
