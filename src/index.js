@@ -1,6 +1,7 @@
 import "./styles.css";
 import { renderNav } from "./navbar.js";
 import { renderHome } from "./home.js";
+import { renderMenu } from "./menu.js";
 import { clearPage } from "./clear.js";
 
 //page buttons
@@ -15,7 +16,7 @@ home.addEventListener('click', () => {
 
 menu.addEventListener('click', () => {
     clearPage();
-    
+    renderMenu();
 });
 
 console.log("we're live");
