@@ -1,9 +1,20 @@
+import './menu.css';
+
 export function renderMenu() {
     const content = document.getElementById('content');
 
-    //food menu
+    //food menu wrapper
     const food = document.createElement('div');
-    menu.id = 'menu';
+    food.id = 'food';
+
+    //add menu sections
+    const start = document.createElement('div');
+    start.id = 'start';
+    const main = document.createElement('div');
+    main.id = 'main';
+    const end = document.createElement('end');
+    end.id = 'end';
+    food.append(start, main, end);
 
     //appetizers
     const starters = [
@@ -57,21 +68,25 @@ export function renderMenu() {
         }
     ];
 
-    //menu contents
-    const start = document.createElement('div');
-    start.id = 'start';
-    const main = document.createElement('div');
-    main.id = 'main';
-    const end = document.createElement('end');
-    end.id = 'end;'
-
-    //render menu contents
-    menu.append(start, main, end); 
-    //turn menu into iterable array 
-    Array.from(menu.children).forEach(section => {
-        
-    });
+    //render a menu section
+    function renderContent(items, section, name) {
+        const heading = document.createElement('h2');
+        heading.className = 'heading';
+        heading.textContent = name;
+        section.prepend(heading);
+        items.forEach(item => {
+            const foodItem = document.createElement('div');
+            foodItem.className = 'food-item';
+            const foodName = item.name;
+            const foodDesc = item.description;
+            foodItem.append(foodName, ": ",  foodDesc);
+            section.append(foodItem);
+        });
+    }
     
-
-    content.append(menu);
+    //render menu sections
+    renderContent(starters, start, "Starters");
+    renderContent(entrees, main, "Entrees");
+    renderContent(dessert, end, "Dessert");
+    content.append(food);
 }

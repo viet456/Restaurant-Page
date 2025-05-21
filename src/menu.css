@@ -1,0 +1,17 @@
+/* food menu */
+#food {
+    font-family: robotico, arial;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    background-color: rgb(234, 73, 73);
+    color: rgb(255, 217, 0);
+    text-shadow: black 1px 1px;
+}
+#food h1, 
+#food h2 {
+    margin-top: 0;
+    padding-bottom: 1rem;
+    padding-top: 3rem;
+}
