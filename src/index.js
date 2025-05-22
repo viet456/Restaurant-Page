@@ -3,6 +3,7 @@ import "./menu.css"
 import { renderNav } from "./navbar.js";
 import { renderHome } from "./home.js";
 import { renderMenu } from "./menu.js";
+import { renderContact } from "./contact.js";
 import { clearPage } from "./clear.js";
 
 //page buttons
@@ -18,6 +19,10 @@ home.addEventListener('click', () => {
 menu.addEventListener('click', () => {
     clearPage();
     renderMenu();
+});
+contact.addEventListener('click', () => {
+    clearPage();
+    renderContact();
 });
 
 console.log("we're live");
