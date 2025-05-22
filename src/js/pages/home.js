@@ -1,5 +1,3 @@
-import restaurantImg from './assets/images/restaurant.jpg';
-
 export function renderHome() {
     document.body.style.overflow = 'hidden'
     const content = document.getElementById('content');

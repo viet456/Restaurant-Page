@@ -1,10 +1,9 @@
-//import "./styles.css";
-import "./menu.css"
-import { renderNav } from "./navbar.js";
-import { renderHome } from "./home.js";
-import { renderMenu } from "./menu.js";
-import { renderContact } from "./contact.js";
-import { clearPage } from "./clear.js";
+import "../css/menu.css"
+import { renderNav } from "./components/navbar.js";
+import { clearPage } from "./components/clear.js";
+import { renderHome } from "./pages/home.js";
+import { renderMenu } from "./pages/menu.js";
+import { renderContact } from "./pages/contact.js";
 
 //page buttons
 const home = document.getElementById('home');

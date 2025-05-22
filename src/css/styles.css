@@ -42,7 +42,7 @@ button:hover {
   content: '';
   position: absolute;
   inset: 0;  
-  background: url('./assets/images/restaurant.jpg') center/cover no-repeat;
+  background: url('../assets/images/restaurant.jpg') center/cover no-repeat;
   filter: blur(1px);
   z-index: 0;
 }

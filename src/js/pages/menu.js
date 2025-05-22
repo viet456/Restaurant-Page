@@ -1,4 +1,4 @@
-import './menu.css';
+import '../../css/menu.css';
 
 export function renderMenu() {
     document.body.style.overflow = 'auto';
