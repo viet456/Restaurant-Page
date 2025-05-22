@@ -1,6 +1,8 @@
 import restaurantImg from './assets/images/restaurant.jpg';
 
 export function renderHome() {
+    document.body.style.overflow = 'hidden'
+    const content = document.getElementById('content');
     //hero/hook
     const hero = document.createElement('div');
     hero.id = 'hero';

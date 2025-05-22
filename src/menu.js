@@ -1,6 +1,7 @@
 import './menu.css';
 
 export function renderMenu() {
+    document.body.style.overflow = 'auto';
     const content = document.getElementById('content');
 
     //food menu wrapper
@@ -8,11 +9,11 @@ export function renderMenu() {
     food.id = 'food';
 
     //add menu sections
-    const start = document.createElement('div');
+    const start = document.createElement('section');
     start.id = 'start';
-    const main = document.createElement('div');
+    const main = document.createElement('section');
     main.id = 'main';
-    const end = document.createElement('end');
+    const end = document.createElement('section');
     end.id = 'end';
     food.append(start, main, end);
 
@@ -77,10 +78,11 @@ export function renderMenu() {
         items.forEach(item => {
             const foodItem = document.createElement('div');
             foodItem.className = 'food-item';
-            const foodName = item.name;
+            const foodName = Object.assign(document.createElement('strong'), { textContent: item.name });
+            foodName.style.fontSize = '1.2rem';
             const foodDesc = item.description;
-            foodItem.append(foodName, ": ",  foodDesc);
-            section.append(foodItem);
+            foodItem.append(foodName, document.createElement('br'), foodDesc);
+            section.append(foodItem, document.createElement('br'));
         });
     }
     

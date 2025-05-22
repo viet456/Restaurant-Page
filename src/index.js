@@ -1,4 +1,4 @@
-import "./styles.css";
+//import "./styles.css";
 import "./menu.css"
 import { renderNav } from "./navbar.js";
 import { renderHome } from "./home.js";

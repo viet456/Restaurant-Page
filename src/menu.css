@@ -1,17 +1,17 @@
 /* food menu */
 #food {
-    font-family: robotico, arial;
+    height: 100%;
+    overflow-y: auto;
+    font-family: roboto, arial;
     width: 60%;
     margin: 0 auto;
-    padding: 0;
-    height: 100%;
-    background-color: rgb(234, 73, 73);
-    color: rgb(255, 217, 0);
-    text-shadow: black 1px 1px;
-}
-#food h1, 
+    background-color: #e7544c;
+    color: #faf3e0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    line-height: 2rem;   
+} 
 #food h2 {
     margin-top: 0;
-    padding-bottom: 1rem;
+    padding-bottom: 0rem;
     padding-top: 3rem;
 }

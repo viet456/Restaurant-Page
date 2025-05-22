@@ -5,17 +5,28 @@ body {
     box-sizing: border-box;
     background-color: white;
     display: grid;
-    grid-template-rows: 1fr 6fr;
+    grid-template-rows: auto 1fr;;
 }
 /* buttons */
-#home {
-    
+button {
+  background: transparent;
+  color: #faf3e0;
+  border: 2px solid #faf3e0;
+  padding: 0.5em 1em;
+  margin: 0 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.1s;
+}
+button:hover {
+  background: #faf3e0;
+  color: #264653;
 }
 
 /* page content */
 #header {
     grid-row: 1/2;
-    background-color: #01796f;
+    background-color: #2a4d14;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,14 +35,15 @@ body {
     grid-row: 2/3;
     text-align: center;  
     position: relative;
-    overflow: hidden; 
+    display: grid;
+    align-items: center;
 }
 #content::before {
   content: '';
   position: absolute;
   inset: 0;  
   background: url('./assets/images/restaurant.jpg') center/cover no-repeat;
-  filter: blur(2px);
+  filter: blur(1px);
   z-index: 0;
 }
 #content > * {
@@ -39,9 +51,11 @@ body {
   z-index: 1;
 }
 h1, h3, span {
-    font-family: robotica, arial;
+    font-family: roboto, arial;
     color: white;
 }
 #hero {
-    grid-row: 3/4;
+    background-color: #e7544c;
+    padding: 2rem;
+    font-size: 1.2rem;
 }
